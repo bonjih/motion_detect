@@ -1,0 +1,32 @@
+{
+    "input_video_path": "/data/test_evening_video.mkv",
+    "output_video_dir": "videos/",
+    "output_image_dir": "images/",
+    "output_df_path": "df/data_dump.parquet",
+    "daytime": false,
+    "process_seconds": 300,
+    "roi": {
+        "y1": 150,
+        "y2": 520,
+        "x1": 0,
+        "x2": 100
+    },
+    "thresholds": {
+        "daytime":{
+            "interval_seconds": 2,
+            "t0": 360000.0,
+            "t1": 500000.0
+        },
+        "nighttime": {
+            "interval_seconds": 2,
+            "t0": 340000.0,
+            "t1": 500000.0
+        }
+    },
+    "log": {
+        "trace_modes": ["log", "video"],
+        "output_log_path": "df/data_log.csv",
+        "log_level": "INFO",
+        "log_format": "%(asctime)s | %(levelname)s | %(message)s"
+    }
+}
